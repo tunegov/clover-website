@@ -5,6 +5,13 @@ const https = require('https')
 const app = express()
 
 app.use(express.static('public'));
+app.use(function (req, res, next) {
+  if (req.secure) {
+    next();
+  } else {
+    res.redirect('https://' + req.headers.host + req.url);
+  }
+});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public.index.html'))
