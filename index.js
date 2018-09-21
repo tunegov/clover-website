@@ -20,4 +20,4 @@ app.get('*', (req, res) => {
 
 app.listen(80, () => console.log('HTTP Server running on port 80'))
 
-app.listen(443, () => console.log('HTTPS Server running on port 443'))
+https.createServer({}, app).listen(443, () => console.log('HTTPS Server running on port 80'))
