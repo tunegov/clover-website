@@ -9,5 +9,4 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(8080, () => console.log('HTTP Server running on port 8080'))
-app.listen(8443, () => console.log('HTTPS Server running on port 8443'))
+app.listen(3000, () => console.log('Server running on port 8080'))
