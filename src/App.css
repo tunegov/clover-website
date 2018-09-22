@@ -33,20 +33,11 @@ body {
   animation-direction: normal;
 }
 
-.company-name {
-  font-family: "Fira Sans", sans-serif;
-  font-size: 10vh;
-  color: white;
-  padding-top: 7vh;
-  width: 100vw;
-  text-align: center;
-}
-
 .cooming-soon {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 5vh;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 6vh;
   color: white;
-  padding-top: 15vh;
+  padding-top: 10vh;
   width: 100vw;
   text-align: center;
 }

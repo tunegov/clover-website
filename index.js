@@ -12,9 +12,9 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(80, () => console.log('HTTP Server running on port 80'))
+app.listen(8080, () => console.log('HTTP Server running on port 80'))
 
 https.createServer({
   key: fs.readFileSync('server.key'),
   cert: fs.readFileSync('server.cert')
-}, app).listen(443, () => console.log('HTTPS Server running on port 443'))
+}, app).listen(8443, () => console.log('HTTPS Server running on port 443'))
