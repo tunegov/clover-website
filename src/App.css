@@ -42,6 +42,17 @@ body {
   text-align: center;
 }
 
+.social-icons {
+  position: fixed;
+    top: 34vh;
+    right: 0;
+}
+
+.social-icon {
+  cursor: pointer;
+  margin: 10px 3px;
+}
+
 @-webkit-keyframes sliding {
   0% {
     left: -11vw;
