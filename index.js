@@ -28,10 +28,10 @@ const sitemap = sm.createSitemap({
     ]
 });
 
-app.use(express.static('public'));
+app.use('/s', express.static('public'));
 
-app.get('/sitemap.xml', function(req, res) {
-    sitemap.toXML(function(err, xml) {
+app.get('/sitemap.xml', function (req, res) {
+    sitemap.toXML(function (err, xml) {
         if (err) {
             return res.status(500).end();
         }
@@ -40,7 +40,7 @@ app.get('/sitemap.xml', function(req, res) {
     });
 });
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
