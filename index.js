@@ -29,6 +29,7 @@ const sitemap = sm.createSitemap({
 });
 
 app.use(express.static('public'));
+app.use('/s', express.static('public'));
 
 app.get('/sitemap.xml', function (req, res) {
     sitemap.toXML(function (err, xml) {
